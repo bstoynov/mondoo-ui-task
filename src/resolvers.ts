@@ -6,8 +6,10 @@ import { getTickets } from "./services/ticketsService";
 
 export const resolvers = {
   Query: {
-    recommendations: async () => await getRecommendations(),
-    metrics: async () => await getMetrics(),
+    recommendations: async (_, { spaceId }: { spaceId: string }) =>
+      await getRecommendations(spaceId),
+    metrics: async (_, { spaceId }: { spaceId: string }) =>
+      await getMetrics(spaceId),
     user: async () => await getUser(),
     teams: async (_, { spaceId }: { spaceId: string }) =>
       await getTeams(spaceId),

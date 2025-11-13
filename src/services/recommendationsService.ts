@@ -1,7 +1,9 @@
 import { mockRecommendations } from "@/data/mockRecommendations";
 import { delay } from "./utils";
 
-export const getRecommendations = async () => {
+export const getRecommendations = async (spaceId: string) => {
   await delay(1000);
-  return mockRecommendations;
+  return mockRecommendations.find(
+    (recommendation) => recommendation.spaceId === spaceId
+  );
 };

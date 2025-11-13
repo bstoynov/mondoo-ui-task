@@ -1,5 +1,9 @@
 type Metrics {
   """
+  SpaceId is the space the metrics are associated with.
+  """
+  spaceId: ID!
+  """
   Total risk is the total risk score accross the entire inventory.
   """
   totalRisk: totalRisk!
