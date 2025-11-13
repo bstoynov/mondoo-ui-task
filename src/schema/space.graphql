@@ -1,0 +1,18 @@
+type Space {
+  """
+  ID is the unique identifier for the space.
+  """
+  id: ID!
+  """
+  Name is the name of the space.
+  """
+  name: String!
+  """
+  Avatar is the avatar of the space.
+  """
+  avatar: String!
+  """
+  teams is the teams associated with the space.
+  """
+  teams: [Team!]!
+}

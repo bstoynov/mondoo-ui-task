@@ -1,0 +1,62 @@
+type Metrics {
+  """
+  Total risk is the total risk score accross the entire inventory.
+  """
+  totalRisk: totalRisk!
+  """
+  Critical exposures is the number of findings that need immediate attention.
+  """
+  criticalExposures: criticalExposures!
+  """
+  Compliance is the percentage of passing checks.
+  """
+  compliance: compliance!
+  """
+  Speed is the average time to close critical findings in minutes.
+  """
+  speed: speed!
+}
+
+type totalRisk {
+  """
+  Value is the total risk score.
+  """
+  value: Float!
+  """
+  Delta is the difference between the current total risk and the previous total risk.
+  """
+  delta: Float!
+}
+
+type criticalExposures {
+  """
+  Value is the number of critical exposures.
+  """
+  value: Int!
+  """
+  Delta is the difference between the current critical exposures and the previous critical exposures.
+  """
+  delta: Int!
+}
+
+type compliance {
+  """
+  Value is the percentage of passing checks.
+  """
+  value: Float!
+  """
+  Delta is the difference between the current compliance and the previous compliance.
+  """
+  delta: Float!
+}
+
+type speed {
+  """
+  Value is the average time to close critical findings in minutes.
+  """
+  value: Float!
+  """
+  Delta is the difference between the current speed and the previous speed.
+  """
+  delta: Float!
+}

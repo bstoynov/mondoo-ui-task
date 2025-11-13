@@ -1,0 +1,14 @@
+type Recommendations {
+  """
+  Ready to fix is the number of findings that are ready to be fixed.
+  """
+  readyToFix: Int!
+  """
+  Ready to review is the number of findings that are ready to be reviewed.
+  """
+  readyToReview: Int!
+  """
+  Approaching SLA is the number of tasks that are due soon.
+  """
+  approachingSla: Int!
+}

@@ -1,0 +1,14 @@
+type Team {
+  """
+  ID is the unique identifier for the team.
+  """
+  id: ID!
+  """
+  Name is the name of the team.
+  """
+  name: String!
+  """
+  spaceId is the space the team is associated with.
+  """
+  spaceId: ID!
+}

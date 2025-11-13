@@ -8,6 +8,10 @@
     "moduleResolution": "node",
     "esModuleInterop": true,
     "types": ["node"],
-    "allowArbitraryExtensions": true
+    "allowArbitraryExtensions": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    }
   }
 }

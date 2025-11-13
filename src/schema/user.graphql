@@ -1,0 +1,26 @@
+type User {
+  """
+  ID is the unique identifier for the user.
+  """
+  id: ID!
+  """
+  Name is the name of the user.
+  """
+  name: String!
+  """
+  Email is the email of the user.
+  """
+  email: String!
+  """
+  Avatar is the avatar of the user.
+  """
+  avatar: String!
+  """
+  Role is the role of the user.
+  """
+  role: String!
+  """
+  spaces is the spaces the user has access to.
+  """
+  spaces: [Space!]!
+}

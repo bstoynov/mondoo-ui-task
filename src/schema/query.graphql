@@ -1,0 +1,6 @@
+type Query {
+  recommendations: Recommendations!
+  metrics: Metrics!
+  user: User!
+  teams(spaceId: ID!): [Team!]!
+}

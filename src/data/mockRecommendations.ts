@@ -1,6 +1,5 @@
 export const mockRecommendations = {
-  totalRisk: 375.23,
-  criticalExposures: 2,
-  compliance: 57.8,
-  speed: 752,
+  readyToFix: 18,
+  readyToReview: 8,
+  approachingSla: 5,
 };
