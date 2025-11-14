@@ -1,9 +1,9 @@
 import { useState } from "react";
+import { useQuery } from "@apollo/client/react";
+import { GET_USER } from "@/graphql/queries/GetUser";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
-import { GET_USER } from "./graphql/queries/GetUser";
-import { useQuery } from "@apollo/client/react";
 
 function App() {
   const [count, setCount] = useState(0);
