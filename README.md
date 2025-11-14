@@ -1,10 +1,6 @@
-# UI Code Exam
+# UI Engineering Showcase
 
-Welcome to the UI Code Exam! This repository contains a full-stack application scaffold with a pre-built GraphQL server and a starter React frontend. Your task is to implement the user interface according to the provided Figma design.
-
-## What You're Building
-
-![Dashboard Screenshot](https://github.com/user-attachments/assets/9ddc6496-9227-4efa-ac27-3749776316f7)
+Welcome to the UI Engineering Showcase! This repository contains a full-stack application scaffold with a pre-built GraphQL server and a starter React frontend. Your task is to implement the user interface according to the provided requirements and Figma design. Our goal with this project is to allow you to showcase your talent in a way that matches how we actually work. Please take your time reading through the project requirements - if you need further clarification on anything, please reach out to your contact and we will be happy to answer.
 
 This is a pnpm monorepo containing:
 
@@ -22,9 +18,55 @@ The GraphQL server exposes the following queries:
 
 All data types are fully typed in GraphQL schema files located in `/server/src/schema/`.
 
+## What You're Building
+
+![Dashboard Screenshot](https://github.com/user-attachments/assets/9ddc6496-9227-4efa-ac27-3749776316f7)
+
+You'll be building out and animating a single page dashboard.
+
+On initial spin up, you'll see an API call made that returns a single user. This is the user which you'll use for the entirety of the dashboard. While there is another user that exists, there is no need for you to switch between them.
+
+**Navigation Card**
+
+Starting on the left, you'll see the navigation card. This contains Home and Task links, and a Teams Dropdown. Below that card, is the "space switcher" which will be used to switch between the user's space.
+You'll find the user's available spaces in the user endpoint.
+You'll find the user's available teams in the teams endpoint.
+
+**Date Range Selector**
+
+On the top right you'll see a date picker. The date picker should be functional to change dates, but for now there is no data for it to request, so it is expected that no change will happen when the user changes the date.
+
+**Search**
+
+On the top right you will also see a search button. This should animate in some fashion to allow the user to input some search text. You are welcome to use your imagination for how this should function. At the moment there is no search call - so a simple function that console logs the search will be sufficient.
+
+**Recommendations**
+
+Below the home title, you'll find the recommendations card. You'll call both the recommendations endpoint and the reports endpoint for this data.
+
+**Metrics Cards**
+
+The four cards in the middle of the screen are the Metrics boxes. For this data, call the metrics endpoint"
+
+**Top Remediation Steps**
+
+The table is loaded using data from the tickets endpoint. We suggest using the Mui Data Grid for this table.
+
 ## Requirements
 
-<!-- You will fill this section out -->
+- The user can see their available teams
+- The user can switch spaces
+- The user can select a date range (the date range will not change data)
+- The user can search for a string (no data response is expected on search)
+- The user can see recommendations for each space
+- The user can see metrics for each space
+- The user can see top remediation steps for each space
+- No changes are made to the server
+- Anything that moves, should animate
+
+**Important notes**
+
+You are welcome to use libraries that are not currently installed, please be prepared to explain your choices for including any packages not currently present.
 
 ## Getting Started
 
@@ -41,8 +83,16 @@ npm install -g pnpm
 
 ### Installation
 
-1. Clone this repository
-2. Install dependencies from the root directory:
+1. Fork this this repository
+2. Select your GitHub account as the destination
+3. Clone your forked repository to your local machine:
+
+```bash
+git clone https://github.com/YOUR-USERNAME/ui-interview-codetest-2.git
+cd ui-interview-codetest-2
+```
+
+4. Install dependencies from the root directory:
 
 ```bash
 pnpm install
