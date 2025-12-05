@@ -14,10 +14,12 @@ import type { TypedDocumentNode as DocumentNode } from '@graphql-typed-document-
  * Learn more about it here: https://the-guild.dev/graphql/codegen/plugins/presets/preset-client#reducing-bundle-size
  */
 type Documents = {
+    "\n  query GetMetrics($spaceId: ID!) {\n    metrics(spaceId: $spaceId) {\n      compliance {\n        delta\n        value\n      }\n      spaceId\n      totalRisk {\n        value\n        delta\n      }\n      criticalExposures {\n        value\n        delta\n      }\n      speed {\n        value\n        delta\n      }\n    }\n  }\n": typeof types.GetMetricsDocument,
     "\n  query GetTickets($spaceId: ID!) {\n    tickets(spaceId: $spaceId) {\n      id\n      title\n      health\n      createdAt\n      ownerId\n      progress\n      spaceId\n    }\n  }\n": typeof types.GetTicketsDocument,
     "\n  query GetUser {\n    user {\n      id\n      name\n      email\n      avatar\n      role\n      spaces {\n        id\n        name\n        avatar\n      }\n    }\n  }\n": typeof types.GetUserDocument,
 };
 const documents: Documents = {
+    "\n  query GetMetrics($spaceId: ID!) {\n    metrics(spaceId: $spaceId) {\n      compliance {\n        delta\n        value\n      }\n      spaceId\n      totalRisk {\n        value\n        delta\n      }\n      criticalExposures {\n        value\n        delta\n      }\n      speed {\n        value\n        delta\n      }\n    }\n  }\n": types.GetMetricsDocument,
     "\n  query GetTickets($spaceId: ID!) {\n    tickets(spaceId: $spaceId) {\n      id\n      title\n      health\n      createdAt\n      ownerId\n      progress\n      spaceId\n    }\n  }\n": types.GetTicketsDocument,
     "\n  query GetUser {\n    user {\n      id\n      name\n      email\n      avatar\n      role\n      spaces {\n        id\n        name\n        avatar\n      }\n    }\n  }\n": types.GetUserDocument,
 };
@@ -36,6 +38,10 @@ const documents: Documents = {
  */
 export function graphql(source: string): unknown;
 
+/**
+ * The graphql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
+ */
+export function graphql(source: "\n  query GetMetrics($spaceId: ID!) {\n    metrics(spaceId: $spaceId) {\n      compliance {\n        delta\n        value\n      }\n      spaceId\n      totalRisk {\n        value\n        delta\n      }\n      criticalExposures {\n        value\n        delta\n      }\n      speed {\n        value\n        delta\n      }\n    }\n  }\n"): (typeof documents)["\n  query GetMetrics($spaceId: ID!) {\n    metrics(spaceId: $spaceId) {\n      compliance {\n        delta\n        value\n      }\n      spaceId\n      totalRisk {\n        value\n        delta\n      }\n      criticalExposures {\n        value\n        delta\n      }\n      speed {\n        value\n        delta\n      }\n    }\n  }\n"];
 /**
  * The graphql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
  */

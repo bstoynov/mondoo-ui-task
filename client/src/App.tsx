@@ -1,5 +1,5 @@
 import { Box, Container } from "@mui/material";
-import MetricList from "./components/MetricList/MetricList";
+import MetricList from "./components/metrics/MetricList/MetricList";
 import mondooBackground from "./assets/mondoo-background.png";
 
 function App() {

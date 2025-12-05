@@ -2,17 +2,19 @@ import { Box, Stack, Typography } from "@mui/material";
 import RollingNumber from "../RollingNumber/RollingNumber";
 import CircularProgress from "../CircularProgress/CircularProgress";
 import MetricDelta from "../MetricDelta/MetricDelta";
-import type { MetricItemType } from "./MetricItem.types";
-import { metricMetaDataMap } from "./MetricItem.constants";
+import type { MetricItemProps } from "./MetricItem.types";
 
 function MetricItem({
-  name,
+  title,
+  subtitle,
+  decimalPrecision,
+  unit,
   value,
   delta,
-  reverseIndicator,
   maxValue,
+  reverseIndicator,
   significant,
-}: MetricItemType) {
+}: MetricItemProps) {
   return (
     <Stack
       component="li"
@@ -34,16 +36,16 @@ function MetricItem({
               delta={delta}
               reverseIndicator={reverseIndicator}
               significant={significant}
-              decimalPrecision={metricMetaDataMap[name].decimalPrecision}
-              unit={metricMetaDataMap[name].unit}
+              decimalPrecision={decimalPrecision}
+              unit={unit}
             />
           }
           footerContent={
             <MetricDelta
               delta={delta}
               reverseIndicator={reverseIndicator}
-              decimalPrecision={metricMetaDataMap[name].decimalPrecision}
-              unit={metricMetaDataMap[name].unit}
+              decimalPrecision={decimalPrecision}
+              unit={unit}
             />
           }
           reverseIndicator={reverseIndicator}
@@ -59,7 +61,7 @@ function MetricItem({
           textTransform="uppercase"
           letterSpacing={1.5}
         >
-          {metricMetaDataMap[name].title}
+          {title}
         </Typography>
         <Typography
           component="p"
@@ -68,7 +70,7 @@ function MetricItem({
           lineHeight={1.42}
           textAlign="center"
         >
-          {metricMetaDataMap[name].subtitle}
+          {subtitle}
         </Typography>
       </Stack>
     </Stack>

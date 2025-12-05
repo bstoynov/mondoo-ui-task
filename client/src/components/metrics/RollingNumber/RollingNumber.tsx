@@ -1,8 +1,7 @@
 import { Stack, Typography } from "@mui/material";
 import { motion } from "motion/react";
 import type { RollingNumberProps } from "./RollingNumber.types";
-import useAnimateNumberValue from "@/hooks/useAnimateNumberValue";
-import useRedGreenTransition from "@/hooks/useRedGreenTransition";
+import { useAnimateNumberValue, useRedGreenTransition } from "@/hooks";
 
 const MotionTypography = motion(Typography);
 

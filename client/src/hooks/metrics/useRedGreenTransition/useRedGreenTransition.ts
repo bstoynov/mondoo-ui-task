@@ -1,12 +1,6 @@
 import { useTheme } from "@mui/material";
 import { useState } from "react";
-
-type UseRedGreenTransitionParams = {
-  transitionProp: "color" | "stroke";
-  delta: number;
-  reverseIndicator?: boolean;
-  persist: boolean;
-};
+import type { UseRedGreenTransitionParams } from "./useRedGreenTransition.types";
 
 const useRedGreenTransition = ({
   delta,

@@ -1,8 +1,7 @@
 import { Stack } from "@mui/material";
 import { motion } from "motion/react";
 import type { CircularProgressProps } from "./CircularProgress.types";
-import useAnimateNumberValue from "@/hooks/useAnimateNumberValue";
-import useRedGreenTransition from "@/hooks/useRedGreenTransition";
+import { useAnimateNumberValue, useRedGreenTransition } from "@/hooks";
 
 function CircularProgress({
   totalProgress,
