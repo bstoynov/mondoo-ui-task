@@ -28,8 +28,9 @@ function CircularProgress({
   const gapInDegrees = FULL_CIRCLE_DEGREES * gapFraction;
   const gapInRadians = degreesToRadians(gapInDegrees);
   const usableArc = fullArc - gapInRadians * radius;
+
   const { color, updateColor, transitionStyle } = useRedGreenTransition({
-    transitionProp: "stroke",
+    transitionProperty: "stroke",
     persist: significant,
     delta,
     reverseIndicator,
@@ -109,7 +110,7 @@ function CircularProgress({
             strokeLinecap="round"
             strokeDasharray={progressStrokeDashArray}
             style={{
-              transition: transitionStyle,
+              ...transitionStyle,
               transform: `rotate(${getRotationAngle(usableArcPercent)}deg)`,
               transformOrigin: "center",
             }}

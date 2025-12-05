@@ -1,2 +1,2 @@
-export * from "./common/animation.constants";
-export * from "./metrics/metrics.constants";
+export * from "./animation.constants";
+export * from "./metrics.constants";

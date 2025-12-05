@@ -14,7 +14,7 @@ function RollingNumber({
   unit = "",
 }: RollingNumberProps) {
   const { color, updateColor, transitionStyle } = useRedGreenTransition({
-    transitionProp: "color",
+    transitionProperty: "color",
     persist: significant,
     delta,
     reverseIndicator,
@@ -36,7 +36,7 @@ function RollingNumber({
         lineHeight={1}
         fontWeight="bold"
         color={color}
-        style={{ transition: transitionStyle }}
+        style={transitionStyle}
       >
         {rollingNumber}
       </MotionTypography>
@@ -46,7 +46,7 @@ function RollingNumber({
         lineHeight={1}
         fontWeight="bold"
         color={color}
-        style={{ transition: transitionStyle }}
+        style={transitionStyle}
       >
         {unit}
       </MotionTypography>

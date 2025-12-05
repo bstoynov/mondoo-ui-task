@@ -1,4 +1,4 @@
-import { DRAMATIC_ANIMATION } from "@/constants/common/animation.constants";
+import { EXTREME_EASE_OUT } from "@/constants/animation.constants";
 import { animate, useMotionValue, useTransform } from "motion/react";
 import { useEffect } from "react";
 import type { UseAnimateNumberValueParams } from "./useAnimateNumberValue.types";
@@ -15,9 +15,9 @@ const useAnimateNumberValue = ({
 
   useEffect(() => {
     const animation = animate(rollingNum, end, {
-      delay: DRAMATIC_ANIMATION.delay,
-      duration: DRAMATIC_ANIMATION.duration,
-      ease: DRAMATIC_ANIMATION.easing,
+      delay: EXTREME_EASE_OUT.delay,
+      duration: EXTREME_EASE_OUT.duration,
+      ease: EXTREME_EASE_OUT.easing,
       onComplete,
     });
 

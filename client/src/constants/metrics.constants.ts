@@ -9,20 +9,19 @@ export const metricMetaDataMap: MetricMetaDataMap = {
     maxValue: 500,
     decimalPrecision: 1,
     reverseIndicator: true,
-    significant: true,
+    // significant: true,
   },
   criticalExposures: {
     title: "Critical exposures",
     subtitle: "Vulnerabilities requiring immediate fixes",
     maxValue: 500,
-    significant: false,
   },
   compliance: {
     title: "Policy Compliance",
     subtitle: "Pass/fail trend against your checks",
     maxValue: 500,
     unit: "%",
-    significant: true,
+    // significant: true,
   },
   speed: {
     title: "Remediation Speed",
@@ -31,6 +30,5 @@ export const metricMetaDataMap: MetricMetaDataMap = {
     maxValue: 500,
     unit: "H",
     reverseIndicator: true,
-    significant: false,
   },
 };
