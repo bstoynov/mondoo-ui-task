@@ -2,6 +2,12 @@ import { Stack } from "@mui/material";
 import { motion } from "motion/react";
 import type { CircularProgressProps } from "./CircularProgress.types";
 import { useAnimateNumberValue, useRedGreenTransition } from "@/hooks";
+import {
+  degreesToRadians,
+  getGapFraction,
+  getRotationAngle,
+} from "./CircularProgress.utils";
+import { FULL_CIRCLE_DEGREES } from "./CircularProgress.constants";
 
 function CircularProgress({
   totalProgress,
@@ -15,12 +21,13 @@ function CircularProgress({
   reverseIndicator,
   significant = false,
 }: CircularProgressProps) {
-  // TODO: Refactor this component to remove magic numbers
   const radius = (diameter - strokeWidth) / 2;
   const center = diameter / 2;
   const fullArc = 2 * Math.PI * radius;
-  const gapRadians = (360 * (1 - usableArcPercent / 100) * Math.PI) / 180;
-  const usableArc = fullArc - gapRadians * radius;
+  const gapFraction = getGapFraction(usableArcPercent);
+  const gapInDegrees = FULL_CIRCLE_DEGREES * gapFraction;
+  const gapInRadians = degreesToRadians(gapInDegrees);
+  const usableArc = fullArc - gapInRadians * radius;
   const { color, updateColor, transitionStyle } = useRedGreenTransition({
     transitionProp: "stroke",
     persist: significant,
@@ -75,7 +82,6 @@ function CircularProgress({
         height={diameter}
         viewBox={`0 0 ${diameter} ${diameter}`}
       >
-        {/* <BackgroundRing /> */}
         <circle
           cx={center}
           cy={center}
@@ -87,36 +93,28 @@ function CircularProgress({
           strokeLinecap="round"
           fill="none"
           style={{
-            transform: `rotate(${
-              90 + ((100 - usableArcPercent) / 2 / 100) * 360
-            }deg)`,
+            transform: `rotate(${getRotationAngle(usableArcPercent)}deg)`,
             transformOrigin: "center",
           }}
         />
-        {/* </BackgroundRing /> */}
 
-        {/* <ProgressRing> */}
         {currentProgress ? (
           <motion.circle
             cx={center}
             cy={center}
             r={radius}
             stroke={color}
-            // strokeOpacity={0.4}
             strokeWidth={strokeWidth}
             fill="none"
             strokeLinecap="round"
             strokeDasharray={progressStrokeDashArray}
             style={{
               transition: transitionStyle,
-              transform: `rotate(${
-                90 + ((100 - usableArcPercent) / 2 / 100) * 360
-              }deg)`,
+              transform: `rotate(${getRotationAngle(usableArcPercent)}deg)`,
               transformOrigin: "center",
             }}
           />
         ) : null}
-        {/* </ProgressRing> */}
       </svg>
     </Stack>
   );
