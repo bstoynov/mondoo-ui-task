@@ -1,8 +1,8 @@
 import { Box, Stack } from "@mui/material";
 import mondooBackground from "./assets/mondoo-background.png";
-import { MetricList, NavigationCard } from "./components";
-import RecommendationCard from "./components/recommendations/RecommendationCard/RecommendationCard";
+import { MetricList, NavigationCard, RecommendationCard } from "@/components";
 
+// TODO: move to dashboard component
 function App() {
   return (
     <Box
