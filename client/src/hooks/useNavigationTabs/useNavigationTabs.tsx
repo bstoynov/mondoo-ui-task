@@ -1,7 +1,7 @@
 import { STATIC_TABS_DATA } from "@/constants";
 import useTeams from "../useTeams/useTeams";
 import { useMemo } from "react";
-import type { NavigationTab } from "@/types";
+import type { NavigationTab } from "@/sharedTypes";
 
 // TODO: see if spaceId can remain string or can be derived from user
 const useNavigationTabs = (spaceId: string) => {

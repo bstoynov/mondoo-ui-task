@@ -16,7 +16,7 @@ function MetricList() {
   }
 
   return (
-    <Stack component="ul" direction="row" spacing={4}>
+    <Stack direction="row" gap={4}>
       {data.map((metric) => (
         <MetricItem key={metric.title} {...metric} />
       ))}

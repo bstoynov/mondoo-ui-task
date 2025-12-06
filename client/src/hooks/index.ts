@@ -2,4 +2,5 @@ export { default as useAnimateNumberValue } from "./useAnimateNumberValue/useAni
 export { default as useRedGreenTransition } from "./useRedGreenTransition/useRedGreenTransition";
 export { default as useMetrics } from "./useMetrics/useMetrics";
 export { default as useTeams } from "./useTeams/useTeams";
+export { default as useRecommendations } from "./useRecommendations/useRecommendations";
 export { default as useNavigationTabs } from "./useNavigationTabs/useNavigationTabs";

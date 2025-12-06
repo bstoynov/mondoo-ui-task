@@ -1,6 +1,10 @@
 import { metricMetaDataMap } from "@/constants";
-import type { MetricData, MetricMetaData, MetricName } from "@/types";
 import type { GetMetricsQuery } from "@/types/graphql";
+import type {
+  MetricData,
+  MetricMetaData,
+  MetricName,
+} from "@/sharedTypes/metrics.types";
 
 export const enrichMetricsData = (
   rawData: GetMetricsQuery | undefined

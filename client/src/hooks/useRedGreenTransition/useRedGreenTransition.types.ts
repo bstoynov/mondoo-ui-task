@@ -1,4 +1,4 @@
-import type { MetricBaseData, MetricMetaData } from "@/types";
+import type { MetricBaseData, MetricMetaData } from "@/sharedTypes";
 
 export type UseRedGreenTransitionParams = Pick<MetricBaseData, "delta"> &
   Pick<MetricMetaData, "reverseIndicator"> & {

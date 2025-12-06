@@ -1,6 +1,7 @@
 import { ButtonBase, Typography } from "@mui/material";
 import ActiveTabIndicator from "../ActiveTabIndicator/ActiveTabIndicator";
 import type { NavigationLinkTabItemProps } from "./NavigationLinkTabItem.types";
+import { MAIN_TABS_LAYOUT_ID } from "@/constants";
 
 function NavigationLinkTabItem({
   name,
@@ -35,7 +36,7 @@ function NavigationLinkTabItem({
         {name}
       </Typography>
 
-      <ActiveTabIndicator active={active} />
+      <ActiveTabIndicator active={active} layoutId={MAIN_TABS_LAYOUT_ID} />
     </ButtonBase>
   );
 }

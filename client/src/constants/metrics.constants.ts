@@ -1,4 +1,4 @@
-import type { MetricMetaDataMap } from "@/types";
+import type { MetricMetaDataMap } from "@/sharedTypes";
 
 // TODO: use random maxValues
 // TODO: audio all values so they make sense, also change BE to show more dramatic diffs

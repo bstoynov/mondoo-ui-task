@@ -1,5 +1,5 @@
 import type { ReactElement } from "react";
-import type { MetricBaseData, MetricMetaData } from "@/types";
+import type { MetricBaseData, MetricMetaData } from "@/sharedTypes";
 
 export type CircularProgressProps = Pick<
   MetricMetaData,

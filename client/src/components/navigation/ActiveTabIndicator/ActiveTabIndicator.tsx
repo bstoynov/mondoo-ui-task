@@ -4,7 +4,7 @@ import type { ActiveTabIndicatorProps } from "./ActiveTabIndicator.types";
 
 const MotionBox = motion(Box);
 
-function ActiveTabIndicator({ active }: ActiveTabIndicatorProps) {
+function ActiveTabIndicator({ active, layoutId }: ActiveTabIndicatorProps) {
   if (!active) return null;
 
   return (
@@ -15,7 +15,7 @@ function ActiveTabIndicator({ active }: ActiveTabIndicatorProps) {
       left="0"
       right="0"
       borderRadius={2}
-      layoutId="activeTabIndicator"
+      layoutId={layoutId}
       sx={(theme) => ({
         backgroundColor: theme.palette.background.primaryHighlight,
       })}

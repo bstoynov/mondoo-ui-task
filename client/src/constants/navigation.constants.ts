@@ -1,4 +1,4 @@
-import type { NavigationTab } from "@/types";
+import type { NavigationTab } from "@/sharedTypes";
 
 export const STATIC_TABS_DATA: NavigationTab[] = [
   {
@@ -14,3 +14,5 @@ export const STATIC_TABS_DATA: NavigationTab[] = [
     name: "Teams",
   },
 ];
+
+export const MAIN_TABS_LAYOUT_ID = "MAIN_TABS_LAYOUT_ID";

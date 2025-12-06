@@ -2,7 +2,7 @@ import type {
   NavigationTab,
   NavigationTabLinkComponentProps,
   TeamData,
-} from "@/types";
+} from "@/sharedTypes";
 
 export type TeamHighlightColorMapType = Record<TeamData["id"], string>;
 

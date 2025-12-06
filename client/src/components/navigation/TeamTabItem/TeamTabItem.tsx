@@ -2,6 +2,7 @@ import { Box, ButtonBase, Typography } from "@mui/material";
 import { teamHighlightColorMap } from "./TeamTabItem.constants";
 import ActiveTabIndicator from "../ActiveTabIndicator/ActiveTabIndicator";
 import type { TeamTabItemProps } from "./TeamTabItem.types";
+import { MAIN_TABS_LAYOUT_ID } from "@/constants";
 
 function TeamTabItem({ id, name, active, onClick }: TeamTabItemProps) {
   return (
@@ -43,7 +44,7 @@ function TeamTabItem({ id, name, active, onClick }: TeamTabItemProps) {
       >
         {name}
       </Typography>
-      <ActiveTabIndicator active={active} />
+      <ActiveTabIndicator active={active} layoutId={MAIN_TABS_LAYOUT_ID} />
     </ButtonBase>
   );
 }

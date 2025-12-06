@@ -1,4 +1,4 @@
-import type { NavigationTab, NavigationTabLinkComponentProps } from "@/types";
+import type { NavigationTab, NavigationTabLinkComponentProps } from "@/sharedTypes";
 
 export type NavigationLinkTabItemProps = NavigationTab &
   NavigationTabLinkComponentProps;

@@ -1,7 +1,7 @@
 import type {
   NavigationTab,
   NavigationTabAccordionComponentProps,
-} from "@/types";
+} from "@/sharedTypes";
 
 export type NavigationAccordionTabItemProps = Omit<NavigationTab, "tabs"> &
   NavigationTabAccordionComponentProps;

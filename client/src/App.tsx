@@ -1,6 +1,7 @@
 import { Box, Stack } from "@mui/material";
 import mondooBackground from "./assets/mondoo-background.png";
 import { MetricList, NavigationCard } from "./components";
+import RecommendationCard from "./components/recommendations/RecommendationCard/RecommendationCard";
 
 function App() {
   return (
@@ -15,7 +16,10 @@ function App() {
     >
       <Stack direction="row" gap={16}>
         <NavigationCard />
-        <MetricList />
+        <Stack gap={8}>
+          <RecommendationCard />
+          <MetricList />
+        </Stack>
       </Stack>
     </Box>
   );
