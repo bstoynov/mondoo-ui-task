@@ -7,7 +7,6 @@ export const GET_METRICS = graphql(`
         delta
         value
       }
-      spaceId
       totalRisk {
         value
         delta

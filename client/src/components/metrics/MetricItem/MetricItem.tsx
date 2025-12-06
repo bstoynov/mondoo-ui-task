@@ -18,10 +18,10 @@ function MetricItem({
   return (
     <Stack
       component="li"
+      padding={6}
+      borderRadius={6}
       sx={(theme) => ({
-        padding: 6,
-        backgroundColor: "#0000004D", // TODO: use theme color
-        borderRadius: 6,
+        backgroundColor: theme.palette.background.primary,
       })}
     >
       <Box>

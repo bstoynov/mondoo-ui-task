@@ -5,6 +5,6 @@ export const EXTREME_EASE_OUT = {
 } as const;
 
 export const RED_GREEN_TRANSITION_PROPS = {
-  transitionDuration: "1.25s",
+  transitionDuration: "1s",
   transitionTimingFunction: "linear",
 } as const;

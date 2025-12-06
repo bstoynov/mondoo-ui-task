@@ -7,6 +7,13 @@ export const appTheme = createTheme({
     text: {
       primary: "#FFFFFF",
       secondary: "#F8F5DE",
+      // TODO: add hover colors
+      primaryHover: "#FFFFFF",
+      secondaryHover: "#F8F5DE",
+    },
+    background: {
+      primary: "#0000004D",
+      primaryHighlight: "#F8F5DE33",
     },
     error: {
       main: "#DF074F",

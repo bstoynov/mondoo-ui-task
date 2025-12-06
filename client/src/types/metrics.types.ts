@@ -2,7 +2,7 @@ import type { GetMetricsQuery } from "@/types/graphql";
 
 export type MetricName = Exclude<
   keyof GetMetricsQuery["metrics"],
-  "__typename" | "spaceId"
+  "__typename"
 >;
 
 export type MetricBaseData = Pick<

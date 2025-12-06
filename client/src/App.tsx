@@ -1,6 +1,8 @@
-import { Box, Container } from "@mui/material";
-import MetricList from "./components/metrics/MetricList/MetricList";
+import { Box, Container, Stack } from "@mui/material";
 import mondooBackground from "./assets/mondoo-background.png";
+import { useQuery } from "@apollo/client/react";
+import { GET_USER } from "./graphql/queries/GetUser";
+import { MetricList, NavigationCard } from "./components";
 
 function App() {
   return (
@@ -13,9 +15,10 @@ function App() {
         background: `url(${mondooBackground}) center center/cover`,
       }}
     >
-      <Container maxWidth="xl">
+      <Stack direction="row" gap={16}>
+        <NavigationCard />
         <MetricList />
-      </Container>
+      </Stack>
     </Box>
   );
 }
