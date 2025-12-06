@@ -1,9 +1,11 @@
+import { spaceIdVar } from "@/apollo/reactiveVars";
 import { GET_RECOMMENDATIONS } from "@/graphql/queries/GetRecommendations";
 import { parseRecommendationsData } from "@/utils/recommendations.utils";
-import { useQuery } from "@apollo/client/react";
+import { useQuery, useReactiveVar } from "@apollo/client/react";
 
-// TODO: see if spaceId can remain string or can be derived from user
-const useRecommendations = (spaceId: string) => {
+const useRecommendations = () => {
+  const spaceId = useReactiveVar(spaceIdVar);
+
   const { data, error, loading } = useQuery(GET_RECOMMENDATIONS, {
     variables: { spaceId },
   });

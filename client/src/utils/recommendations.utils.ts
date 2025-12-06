@@ -20,7 +20,7 @@ export const parseRecommendationsData = (data: GetRecommendationsQuery) => {
 
     const [key, value] = recommendation as [RecommendationName, number];
 
-    if (recommendationNameMapper[key]) {
+    if (recommendationNameMapper[key] && value) {
       recommendations.push({
         id: key,
         name: recommendationNameMapper[key](value),
