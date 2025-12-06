@@ -1,7 +1,4 @@
-import type {
-  NavigationTabBaseProps,
-  NavigationTabComponentProps,
-} from "@/types";
+import type { NavigationTab, NavigationTabLinkComponentProps } from "@/types";
 
-export type NavigationLinkTabItemProps = NavigationTabBaseProps &
-  NavigationTabComponentProps;
+export type NavigationLinkTabItemProps = NavigationTab &
+  NavigationTabLinkComponentProps;

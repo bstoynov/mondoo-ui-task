@@ -1,10 +1,17 @@
-export type NavigationTabBaseProps<T = never> = {
+import type { ReactElement } from "react";
+
+export type NavigationTab = {
   id: string;
   name: string;
-  tabs?: T[];
+  tabs?: NavigationTab[];
 };
 
-export type NavigationTabComponentProps = {
+export type NavigationTabLinkComponentProps = {
   active: boolean;
   onClick: () => void;
+};
+
+export type NavigationTabAccordionComponentProps = {
+  tabs: NavigationTab[];
+  renderTab: (tab: NavigationTab) => ReactElement;
 };

@@ -6,11 +6,11 @@ import type { NavigationAccordionTabItemProps } from "./NavigationAccordionTabIt
 
 const MotionStack = motion(Stack);
 
-function NavigationAccordionTabItem<T>({
+function NavigationAccordionTabItem({
   name,
   tabs,
   renderTab,
-}: NavigationAccordionTabItemProps<T>) {
+}: NavigationAccordionTabItemProps) {
   const [expanded, setExpanded] = useState(false);
 
   return (

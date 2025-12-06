@@ -1,10 +1,9 @@
 import type {
-  NavigationTabBaseProps,
-  NavigationTabComponentProps,
+  NavigationTab,
+  NavigationTabLinkComponentProps,
   TeamData,
 } from "@/types";
 
 export type TeamHighlightColorMapType = Record<TeamData["id"], string>;
 
-export type TeamTabItemProps = NavigationTabBaseProps<TeamData> &
-  NavigationTabComponentProps;
+export type TeamTabItemProps = NavigationTab & NavigationTabLinkComponentProps;

@@ -1,10 +1,7 @@
-import type { NavigationTabBaseProps } from "@/types";
-import type { ReactElement } from "react";
+import type {
+  NavigationTab,
+  NavigationTabAccordionComponentProps,
+} from "@/types";
 
-export type NavigationAccordionTabItemProps<T> = Omit<
-  NavigationTabBaseProps,
-  "tabs"
-> & {
-  tabs: T[];
-  renderTab: (data: T) => ReactElement;
-};
+export type NavigationAccordionTabItemProps = Omit<NavigationTab, "tabs"> &
+  NavigationTabAccordionComponentProps;

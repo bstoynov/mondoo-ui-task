@@ -1,6 +1,6 @@
-import type { NavigationTabComponentProps } from "@/types";
+import type { NavigationTabLinkComponentProps } from "@/types";
 
 export type ActiveTabIndicatorProps = Pick<
-  NavigationTabComponentProps,
+  NavigationTabLinkComponentProps,
   "active"
 >;
