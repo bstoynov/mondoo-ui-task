@@ -1,6 +1,6 @@
-import type { NavigationTabBaseProps } from "@/types";
+import type { NavigationTab } from "@/types";
 
-export const STATIC_TABS_DATA: NavigationTabBaseProps[] = [
+export const STATIC_TABS_DATA: NavigationTab[] = [
   {
     id: "home",
     name: "Home",

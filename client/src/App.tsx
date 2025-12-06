@@ -1,7 +1,5 @@
-import { Box, Container, Stack } from "@mui/material";
+import { Box, Stack } from "@mui/material";
 import mondooBackground from "./assets/mondoo-background.png";
-import { useQuery } from "@apollo/client/react";
-import { GET_USER } from "./graphql/queries/GetUser";
 import { MetricList, NavigationCard } from "./components";
 
 function App() {
