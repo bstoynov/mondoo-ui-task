@@ -54,7 +54,7 @@ function MetricItem({
         <Typography
           component="h3"
           color="textPrimary"
-          fontWeight={800}
+          fontWeight="bold"
           fontSize={13}
           textAlign="center"
           textTransform="uppercase"

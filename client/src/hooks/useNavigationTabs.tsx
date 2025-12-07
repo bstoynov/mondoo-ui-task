@@ -1,7 +1,7 @@
 import { STATIC_TABS_DATA } from "@/constants";
-import useTeams from "../useTeams/useTeams";
 import { useMemo } from "react";
 import type { NavigationTab } from "@/sharedTypes";
+import useTeams from "./useTeams";
 
 const useNavigationTabs = () => {
   const { data: teams, loading } = useTeams();

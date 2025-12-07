@@ -3,7 +3,7 @@ import { useMetrics } from "@/hooks";
 import MetricItem from "../MetricItem/MetricItem";
 
 function MetricList() {
-  const { data, loading } = useMetrics("find-andy");
+  const { data, loading } = useMetrics();
 
   if (loading) {
     // TODO: handle loading

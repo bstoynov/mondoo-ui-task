@@ -5,7 +5,7 @@ import { Check, ExpandLess, ExpandMore } from "@mui/icons-material";
 import { useReactiveVar } from "@apollo/client/react";
 import { spaceIdVar } from "@/apollo/reactiveVars";
 import { AnimatePresence, motion } from "motion/react";
-import { useUser } from "@/hooks";
+import { useClickAway, useUser } from "@/hooks";
 
 const MotionStack = motion.create(Stack);
 
@@ -14,12 +14,13 @@ function UserSpaceDropdown() {
   const selectedSpaceId = useReactiveVar(spaceIdVar);
   const { spaces } = useUser();
   const selectedSpace = spaces?.find((space) => space.id === selectedSpaceId);
+  const dropdownRef = useClickAway(() => setExpanded(false));
 
   if (!spaces || !selectedSpace) return;
 
   return (
     // TODO: move width to constants
-    <Stack width={240} position="relative">
+    <Stack width={240} position="relative" ref={dropdownRef}>
       <UserSpaceDropdownItemBase
         id={selectedSpace.id}
         name={selectedSpace.name}
