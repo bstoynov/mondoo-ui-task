@@ -1,6 +1,6 @@
 import { spaceIdVar } from "@/apollo/reactiveVars";
 import { GET_RECOMMENDATIONS } from "@/graphql/queries/GetRecommendations";
-import { parseRecommendationsData } from "@/utils/recommendations.utils";
+import { parseRecommendationsData } from "@/utils";
 import { useQuery, useReactiveVar } from "@apollo/client/react";
 
 const useRecommendations = () => {

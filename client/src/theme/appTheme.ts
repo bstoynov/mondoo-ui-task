@@ -1,17 +1,23 @@
 import { createTheme } from "@mui/material/styles";
+import "@mui/x-data-grid/themeAugmentation";
 
 export const appTheme = createTheme({
   spacing: 4,
   palette: {
+    DataGrid: { headerBg: "#f0f0f02e" },
     mode: "dark",
     text: {
       primary: "#FFFFFF",
       secondary: "#F8F5DE",
+      accent: "#0A0A22",
     },
     background: {
       primary: "#0000004d",
-      primaryHighlight: "#F8F5DE33",
       primaryHover: "#00000099",
+      primaryHoverSubtle: "#00000054",
+      primaryHighlight: "#F8F5DE33",
+      primaryHighlightSubtle: "#f7f7f70d",
+      accent: "#F8F5DE",
     },
     error: {
       main: "#DF074F",

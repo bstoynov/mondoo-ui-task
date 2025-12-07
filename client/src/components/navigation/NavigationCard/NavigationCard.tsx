@@ -9,18 +9,17 @@ function NavigationCard() {
       position="relative"
       // hardcode height to prevent team juping
       // TODO: move to constants
+      width={240}
       height={840}
+      padding={6}
+      borderRadius={6}
       sx={(theme) => ({
-        width: 240,
-        padding: 6,
-        borderRadius: 6,
         backgroundColor: theme.palette.background.primary,
       })}
     >
       <NavigationHeader />
       <NavigationTabList />
-      {/* TODO: use real avatar */}
-      <NavigationFooter userAvatar="https://i.pravatar.cc/150?img=48" />
+      <NavigationFooter />
     </Stack>
   );
 }

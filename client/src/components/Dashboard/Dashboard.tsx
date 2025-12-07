@@ -1,9 +1,11 @@
 import { Stack } from "@mui/material";
+// TODO: create index.tsx for each of these
 import NavigationCard from "../navigation/NavigationCard/NavigationCard";
 import UserSpaceDropdown from "../navigation/UserSpaceDropdown/UserSpaceDropdown";
 import RecommendationCard from "../recommendations/RecommendationCard/RecommendationCard";
 import MetricList from "../metrics/MetricList/MetricList";
 import Header from "../Header/Header";
+import TopRemediationsCard from "../remediations/TopRemediationsCard/TopRemediationsCard";
 
 function Dashboard() {
   return (
@@ -16,6 +18,7 @@ function Dashboard() {
         <Header />
         <RecommendationCard />
         <MetricList />
+        <TopRemediationsCard />
       </Stack>
     </Stack>
   );

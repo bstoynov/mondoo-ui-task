@@ -2,6 +2,7 @@ import { Stack } from "@mui/material";
 import type { PageContainerProps } from "./PageContainer.types";
 
 function PageContainer({ children, backgroundUrl }: PageContainerProps) {
+  // TODO: fix its not scrollabel
   return (
     <Stack
       component="main"
@@ -13,6 +14,8 @@ function PageContainer({ children, backgroundUrl }: PageContainerProps) {
       padding={8}
       sx={{
         background: `url(${backgroundUrl}) center center/cover`,
+        overflowY: "auto",
+        scrollbarGutter: "stable",
       }}
     >
       {children}

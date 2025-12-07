@@ -1,4 +1,4 @@
-import mondooBackground from "./assets/mondoo-background.png";
+import mondooBackground from "@/assets/mondoo-background.png";
 import { PageContainer, Dashboard } from "@/components";
 
 function App() {
