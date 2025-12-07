@@ -1,7 +1,5 @@
 import type { MetricMetaDataMap } from "@/sharedTypes";
 
-// TODO: use random maxValues
-// TODO: audio all values so they make sense, also change BE to show more dramatic diffs
 export const metricMetaDataMap: MetricMetaDataMap = {
   totalRisk: {
     title: "Total Risk Score",

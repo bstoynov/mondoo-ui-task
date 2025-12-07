@@ -1,6 +1,7 @@
 import { Box } from "@mui/material";
 import { motion } from "motion/react";
 import type { ActiveTabIndicatorProps } from "./ActiveTabIndicator.types";
+import { ACTIVE_TAB_INDICATOR_TRANSITION_PROPS } from "@/constants";
 
 const MotionBox = motion.create(Box);
 
@@ -19,8 +20,7 @@ function ActiveTabIndicator({ active, layoutId }: ActiveTabIndicatorProps) {
       sx={(theme) => ({
         backgroundColor: theme.palette.background.primaryHighlight,
       })}
-      // TODO: move to constants
-      transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+      {...ACTIVE_TAB_INDICATOR_TRANSITION_PROPS}
     />
   );
 }

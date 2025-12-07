@@ -3,6 +3,7 @@ import { AnimatePresence, motion } from "motion/react";
 import { useState } from "react";
 import { ExpandMore, ExpandLess } from "@mui/icons-material";
 import type { NavigationAccordionTabItemProps } from "./NavigationAccordionTabItem.types";
+import { ACCORDION_TRANSITION_PROPS } from "@/constants";
 
 const MotionStack = motion.create(Stack);
 
@@ -50,11 +51,7 @@ function NavigationAccordionTabItem({
         {expanded && (
           <MotionStack
             key="accordion-content"
-            // TODO: move animation to constants
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.2 }}
+            {...ACCORDION_TRANSITION_PROPS}
             gap={2}
           >
             {tabs.map(renderTab)}

@@ -30,7 +30,6 @@ function RollingNumber({
   return (
     <Stack direction="row" gap={0.5}>
       <MotionTypography
-        // TODO: convert to design token styles
         textAlign="center"
         fontSize={38}
         lineHeight={1}

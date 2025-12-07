@@ -1,10 +1,8 @@
 import { DataGrid } from "@mui/x-data-grid";
 import type { TopRemediationsTableProps } from "./TopRemediationsTable.types";
 
-// TODO: remove row border separator
 function TopRemediationsTable({ rows, columns }: TopRemediationsTableProps) {
   return (
-    // TODO: check sizing here
     <div style={{ width: "100%" }}>
       <DataGrid
         rows={rows}
@@ -15,6 +13,7 @@ function TopRemediationsTable({ rows, columns }: TopRemediationsTableProps) {
           params.indexRelativeToCurrentPage % 2 === 0 ? "row even" : "row odd"
         }
         sx={(theme) => ({
+          "--DataGrid-rowBorderColor": "transparent",
           backgroundColor: "transparent",
           border: "none",
           ".even": {

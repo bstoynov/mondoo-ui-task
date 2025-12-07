@@ -1,6 +1,5 @@
 import type { TableColumn } from "./TopRemediationsTable.types";
 
-// TODO: check width
 export const TABLE_COLUMNS_STATIC_DATA: TableColumn[] = [
   {
     field: "health",

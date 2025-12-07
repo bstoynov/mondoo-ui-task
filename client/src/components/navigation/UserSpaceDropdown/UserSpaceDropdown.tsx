@@ -6,6 +6,8 @@ import { useReactiveVar } from "@apollo/client/react";
 import { spaceIdVar } from "@/apollo/reactiveVars";
 import { AnimatePresence, motion } from "motion/react";
 import { useClickAway, useUser } from "@/hooks";
+import { NAVIGATION_CARD_SIZE } from "../NavigationCard/NavigationCard.constants";
+import { ACCORDION_TRANSITION_PROPS } from "@/constants";
 
 const MotionStack = motion.create(Stack);
 
@@ -19,8 +21,11 @@ function UserSpaceDropdown() {
   if (!spaces || !selectedSpace) return;
 
   return (
-    // TODO: move width to constants
-    <Stack width={240} position="relative" ref={dropdownRef}>
+    <Stack
+      width={NAVIGATION_CARD_SIZE.width}
+      position="relative"
+      ref={dropdownRef}
+    >
       <UserSpaceDropdownItemBase
         id={selectedSpace.id}
         name={selectedSpace.name}
@@ -35,11 +40,7 @@ function UserSpaceDropdown() {
         {expanded ? (
           <MotionStack
             key="dropdown-content"
-            // TODO: move animation to constants
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.2 }}
+            {...ACCORDION_TRANSITION_PROPS}
             position="absolute"
             bottom={0}
             left={0}

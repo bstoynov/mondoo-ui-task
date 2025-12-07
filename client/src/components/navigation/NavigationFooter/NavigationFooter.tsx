@@ -2,10 +2,8 @@ import { useUser } from "@/hooks";
 import { Stack } from "@mui/material";
 
 function NavigationFooter() {
-  const { avatar, loading } = useUser();
+  const { avatar } = useUser();
 
-  // TODO: loading skeleton
-  if (loading) return null;
   if (!avatar) return null;
 
   return (
@@ -17,8 +15,7 @@ function NavigationFooter() {
       justifyContent="center"
       alignItems="center"
       width="100%"
-      // TODO: move to constnats
-      height={240}
+      sx={{ aspectRatio: 1 }}
     >
       <img src={avatar} width={36} height={36} style={{ borderRadius: 18 }} />
     </Stack>

@@ -2,7 +2,6 @@ import { Stack } from "@mui/material";
 import type { PageContainerProps } from "./PageContainer.types";
 
 function PageContainer({ children, backgroundUrl }: PageContainerProps) {
-  // TODO: fix its not scrollabel
   return (
     <Stack
       component="main"
