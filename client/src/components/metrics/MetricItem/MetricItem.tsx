@@ -17,6 +17,7 @@ function MetricItem({
 }: MetricItemProps) {
   return (
     <Stack
+      width="100%"
       padding={6}
       borderRadius={6}
       sx={(theme) => ({

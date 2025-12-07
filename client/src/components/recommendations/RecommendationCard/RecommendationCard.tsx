@@ -1,13 +1,17 @@
 import { Stack, Typography } from "@mui/material";
 import RecommendationList from "../RecommendationList/RecommendationList";
 import { useRecommendations } from "@/hooks";
+import Shimmer from "@/components/Shimmer/Shimmer";
 
 function RecommendationCard() {
   // TODO: real spaceid
-  const { data, loading, error } = useRecommendations("nasa-1");
+  const { data, loading } = useRecommendations();
 
   // TODO: handle loading
-  if (loading) return null;
+  if (loading) {
+    return <Shimmer height={106} borderRadius={6} />;
+  }
+
   if (!data) return null;
 
   return (

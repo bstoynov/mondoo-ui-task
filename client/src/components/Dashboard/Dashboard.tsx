@@ -12,7 +12,7 @@ function Dashboard() {
         <NavigationCard />
         <UserSpaceDropdown />
       </Stack>
-      <Stack gap={8}>
+      <Stack gap={8} width="100%">
         <Header />
         <RecommendationCard />
         <MetricList />

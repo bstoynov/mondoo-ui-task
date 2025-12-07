@@ -5,3 +5,4 @@ export { default as RecommendationCard } from "./recommendations/RecommendationC
 export { default as UserSpaceDropdown } from "./navigation/UserSpaceDropdown/UserSpaceDropdown";
 export { default as PageContainer } from "./PageContainer/PageContainer";
 export { default as Dashboard } from "./Dashboard/Dashboard";
+export { default as Shimmer } from "./Shimmer/Shimmer";
