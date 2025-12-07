@@ -1,4 +1,5 @@
 import { Stack, Typography } from "@mui/material";
+import Search from "../Search/Search";
 
 function Header() {
   return (
@@ -11,7 +12,8 @@ function Header() {
       >
         Home
       </Typography>
-      <Stack />
+
+      <Search />
     </Stack>
   );
 }

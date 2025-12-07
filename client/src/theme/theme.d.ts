@@ -11,5 +11,6 @@ declare module "@mui/material/styles" {
     primaryHover: string;
     primaryHoverSubtle: string;
     primaryHighlightSubtle: string;
+    primaryGradient: string;
   }
 }

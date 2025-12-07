@@ -11,6 +11,7 @@ import { ACCORDION_TRANSITION_PROPS } from "@/constants";
 
 const MotionStack = motion.create(Stack);
 
+// TODO: on smaller macbook screen its cutoff (it opens down instead of up)
 function UserSpaceDropdown() {
   const [expanded, setExpanded] = useState(false);
   const selectedSpaceId = useReactiveVar(spaceIdVar);

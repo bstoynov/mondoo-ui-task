@@ -18,6 +18,8 @@ export const appTheme = createTheme({
       primaryHighlight: "#F8F5DE33",
       primaryHighlightSubtle: "#f7f7f70d",
       accent: "#F8F5DE",
+      primaryGradient:
+        "radial-gradient(circle, #C723DC 0%, #6B1376 50%, #361376 100%)",
     },
     error: {
       main: "#DF074F",
