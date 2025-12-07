@@ -8,6 +8,7 @@ const useMetrics = () => {
 
   const { data, error, loading } = useQuery(GET_METRICS, {
     variables: { spaceId },
+    skip: !spaceId,
   });
 
   return {

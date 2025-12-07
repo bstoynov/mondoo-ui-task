@@ -7,6 +7,7 @@ const useTeams = () => {
 
   const { data, error, loading } = useQuery(GET_TEAMS, {
     variables: { spaceId },
+    skip: !spaceId,
   });
 
   return {

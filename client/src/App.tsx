@@ -1,6 +1,11 @@
 import { Box, Stack } from "@mui/material";
 import mondooBackground from "./assets/mondoo-background.png";
-import { MetricList, NavigationCard, RecommendationCard } from "@/components";
+import {
+  MetricList,
+  NavigationCard,
+  RecommendationCard,
+  UserSpaceDropdown,
+} from "@/components";
 
 // TODO: move to dashboard component
 function App() {
@@ -15,7 +20,10 @@ function App() {
       }}
     >
       <Stack direction="row" gap={16}>
-        <NavigationCard />
+        <Stack gap={4}>
+          <NavigationCard />
+          <UserSpaceDropdown />
+        </Stack>
         <Stack gap={8}>
           <RecommendationCard />
           <MetricList />

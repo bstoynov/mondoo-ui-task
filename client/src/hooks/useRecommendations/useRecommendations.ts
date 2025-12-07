@@ -8,6 +8,7 @@ const useRecommendations = () => {
 
   const { data, error, loading } = useQuery(GET_RECOMMENDATIONS, {
     variables: { spaceId },
+    skip: !spaceId,
   });
 
   return {

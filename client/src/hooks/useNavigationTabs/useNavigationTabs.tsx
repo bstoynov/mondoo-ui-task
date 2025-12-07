@@ -6,24 +6,25 @@ import type { NavigationTab } from "@/sharedTypes";
 const useNavigationTabs = () => {
   const { data: teams, loading } = useTeams();
 
-  const tabs = useMemo(
-    (): NavigationTab[] =>
-      STATIC_TABS_DATA.map((tab) => {
-        if (tab.id === "teams" && teams) {
-          return {
-            ...tab,
-            tabs: teams,
-          };
-        }
+  const tabs = useMemo((): NavigationTab[] => {
+    if (loading) return STATIC_TABS_DATA;
 
-        return tab;
-      }),
-    [teams]
-  );
+    return STATIC_TABS_DATA.map((tab) => {
+      if (tab.id === "teams" && teams) {
+        return {
+          ...tab,
+          tabs: teams,
+        };
+      }
+
+      return tab;
+    });
+  }, [teams, loading]);
 
   return {
-    tabs,
+    data: tabs,
     loading,
+    defaultTabId: STATIC_TABS_DATA[0].id,
   };
 };
 

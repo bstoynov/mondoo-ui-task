@@ -6,6 +6,10 @@ import NavigationTabList from "../NavigationTabList/NavigationTabList";
 function NavigationCard() {
   return (
     <Stack
+      position="relative"
+      // hardcode height to prevent team juping
+      // TODO: move to constants
+      height={840}
       sx={(theme) => ({
         width: 240,
         padding: 6,

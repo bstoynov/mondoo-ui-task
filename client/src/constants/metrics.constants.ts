@@ -6,29 +6,32 @@ export const metricMetaDataMap: MetricMetaDataMap = {
   totalRisk: {
     title: "Total Risk Score",
     subtitle: "Composite score across all inventory",
-    maxValue: 500,
+    maxValue: 420,
     decimalPrecision: 1,
     reverseIndicator: true,
-    // significant: true,
   },
   criticalExposures: {
     title: "Critical exposures",
     subtitle: "Vulnerabilities requiring immediate fixes",
-    maxValue: 500,
+    maxValue: 16,
   },
   compliance: {
     title: "Policy Compliance",
     subtitle: "Pass/fail trend against your checks",
-    maxValue: 500,
+    maxValue: 100,
     unit: "%",
-    // significant: true,
   },
   speed: {
     title: "Remediation Speed",
     subtitle: "Avg time to close critical vs high findings",
     decimalPrecision: 1,
-    maxValue: 500,
+    maxValue: 840,
     unit: "H",
     reverseIndicator: true,
   },
+};
+
+export const SIGNIFICANCE_RANGE = {
+  bottom: 0.15,
+  top: 0.85,
 };

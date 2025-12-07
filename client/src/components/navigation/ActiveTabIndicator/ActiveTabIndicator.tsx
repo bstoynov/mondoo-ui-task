@@ -2,7 +2,7 @@ import { Box } from "@mui/material";
 import { motion } from "motion/react";
 import type { ActiveTabIndicatorProps } from "./ActiveTabIndicator.types";
 
-const MotionBox = motion(Box);
+const MotionBox = motion.create(Box);
 
 function ActiveTabIndicator({ active, layoutId }: ActiveTabIndicatorProps) {
   if (!active) return null;

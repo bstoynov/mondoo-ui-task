@@ -4,14 +4,14 @@ import { useState } from "react";
 import { ExpandMore, ExpandLess } from "@mui/icons-material";
 import type { NavigationAccordionTabItemProps } from "./NavigationAccordionTabItem.types";
 
-const MotionStack = motion(Stack);
+const MotionStack = motion.create(Stack);
 
 function NavigationAccordionTabItem({
   name,
   tabs,
   renderTab,
 }: NavigationAccordionTabItemProps) {
-  const [expanded, setExpanded] = useState(false);
+  const [expanded, setExpanded] = useState(true);
 
   return (
     <Stack>
@@ -26,8 +26,9 @@ function NavigationAccordionTabItem({
           paddingBottom: 1.5,
           position: "relative",
           color: theme.palette.text.primary,
+          borderRadius: 2,
           ":hover": {
-            color: theme.palette.text.primaryHover,
+            background: theme.palette.background.primaryHover,
           },
         })}
         onClick={() => setExpanded((prev) => !prev)}

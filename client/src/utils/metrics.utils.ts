@@ -1,10 +1,15 @@
-import { metricMetaDataMap } from "@/constants";
+import { metricMetaDataMap, SIGNIFICANCE_RANGE } from "@/constants";
 import type { GetMetricsQuery } from "@/types/graphql";
 import type {
   MetricData,
   MetricMetaData,
   MetricName,
 } from "@/sharedTypes/metrics.types";
+
+// a metric is considered significant if its below or above a certain percent
+const calculateMetricSignificance = (value: number, maxValue: number) =>
+  value <= maxValue * SIGNIFICANCE_RANGE.bottom ||
+  value >= maxValue * SIGNIFICANCE_RANGE.top;
 
 export const enrichMetricsData = (
   rawData: GetMetricsQuery | undefined
@@ -19,6 +24,10 @@ export const enrichMetricsData = (
     return {
       ...metaData,
       ...rawData.metrics[name],
+      significant: calculateMetricSignificance(
+        rawData.metrics[name].value,
+        metaData.maxValue
+      ),
     };
   });
 };

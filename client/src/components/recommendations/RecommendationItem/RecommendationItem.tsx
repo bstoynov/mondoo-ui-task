@@ -15,8 +15,9 @@ function RecommendationItem({
         padding: 3,
         position: "relative",
         color: theme.palette.text.primary,
+        borderRadius: 2,
         ":hover": {
-          color: theme.palette.text.primaryHover,
+          background: theme.palette.background.primaryHover,
         },
       })}
       onClick={onClick}

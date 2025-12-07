@@ -3,7 +3,7 @@ import { motion } from "motion/react";
 import type { RollingNumberProps } from "./RollingNumber.types";
 import { useAnimateNumberValue, useRedGreenTransition } from "@/hooks";
 
-const MotionTypography = motion(Typography);
+const MotionTypography = motion.create(Typography);
 
 function RollingNumber({
   value,

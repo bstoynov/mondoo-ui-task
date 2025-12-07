@@ -19,8 +19,9 @@ function TeamTabItem({ id, name, active, onClick }: TeamTabItemProps) {
         paddingBottom: 2,
         position: "relative",
         color: theme.palette.text.primary,
+        borderRadius: 2,
         ":hover": {
-          color: theme.palette.text.primaryHover,
+          background: theme.palette.background.primaryHover,
         },
       })}
       onClick={onClick}
@@ -31,17 +32,7 @@ function TeamTabItem({ id, name, active, onClick }: TeamTabItemProps) {
         bgcolor={teamHighlightColorMap[id]}
         borderRadius={6}
       />
-      <Typography
-        noWrap
-        fontSize={12}
-        lineHeight={1.5}
-        color="textSecondary"
-        sx={(theme) => ({
-          ":hover": {
-            color: theme.palette.text.secondaryHover,
-          },
-        })}
-      >
+      <Typography noWrap fontSize={12} lineHeight={1.5} color="textSecondary">
         {name}
       </Typography>
       <ActiveTabIndicator active={active} layoutId={MAIN_TABS_LAYOUT_ID} />

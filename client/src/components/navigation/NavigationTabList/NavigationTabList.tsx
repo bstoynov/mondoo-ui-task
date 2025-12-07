@@ -1,22 +1,25 @@
 import { Stack } from "@mui/material";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import NavigationAccordionTabItem from "../NavigationAccordionTabItem/NavigationAccordionTabItem";
 import NavigationLinkTabItem from "../NavigationLinkTabItem/NavigationLinkTabItem";
 import TeamTabItem from "../TeamTabItem/TeamTabItem";
 import { useNavigationTabs } from "@/hooks";
-import { STATIC_TABS_DATA } from "@/constants";
+import { spaceIdVar } from "@/apollo/reactiveVars";
 
 function NavigationTabList() {
-  const [activeTabId, setActiveTabId] = useState(STATIC_TABS_DATA[0].id);
-  // TODO: use real spaceId
-  const { tabs, loading } = useNavigationTabs("find-andy");
+  const spaceId = spaceIdVar();
+  const { data, defaultTabId } = useNavigationTabs();
+  const [activeTabId, setActiveTabId] = useState(defaultTabId);
 
-  // TODO: handle loading
-  if (loading) return null;
+  useEffect(() => {
+    // false positive: https://github.com/facebook/react/issues/34045
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setActiveTabId(defaultTabId);
+  }, [spaceId, defaultTabId]);
 
   return (
     <Stack gap={4}>
-      {tabs.map(({ id, name, tabs }) =>
+      {data.map(({ id, name, tabs }) =>
         tabs ? (
           <NavigationAccordionTabItem
             key={id}
@@ -25,6 +28,7 @@ function NavigationTabList() {
             tabs={tabs}
             renderTab={(teamTab) => (
               <TeamTabItem
+                key={teamTab.id}
                 id={teamTab.id}
                 name={teamTab.name}
                 active={teamTab.id === activeTabId}

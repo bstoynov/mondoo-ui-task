@@ -19,9 +19,10 @@ function NavigationLinkTabItem({
         paddingTop: 1.5,
         paddingBottom: 1.5,
         position: "relative",
+        borderRadius: 2,
         color: theme.palette.text.primary,
         ":hover": {
-          color: theme.palette.text.primaryHover,
+          background: theme.palette.background.primaryHover,
         },
       })}
       onClick={onClick}
