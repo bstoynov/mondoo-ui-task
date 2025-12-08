@@ -20,6 +20,8 @@
     "@mui/icons-material": "^7.3.5",
     "@mui/material": "^7.3.5",
     "@mui/x-data-grid": "^8.21.0",
+    "@mui/x-date-pickers": "^8.21.0",
+    "@mui/x-date-pickers-pro": "^8.21.0",
     "@parcel/watcher": "^2.5.1",
     "date-fns": "^4.1.0",
     "graphql": "^16.12.0",

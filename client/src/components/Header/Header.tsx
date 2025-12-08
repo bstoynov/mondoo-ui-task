@@ -1,5 +1,6 @@
 import { Stack, Typography } from "@mui/material";
 import Search from "../Search/Search";
+import DateField from "../DateField/DateField";
 
 function Header() {
   return (
@@ -14,7 +15,7 @@ function Header() {
       </Typography>
 
       <Stack direction="row" gap={4}>
-        asd
+        <DateField />
         <Search />
       </Stack>
     </Stack>

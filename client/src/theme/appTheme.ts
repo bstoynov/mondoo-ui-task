@@ -20,6 +20,11 @@ export const appTheme = createTheme({
       accent: "#F8F5DE",
       primaryGradient:
         "radial-gradient(circle, #C723DC 0%, #6B1376 50%, #361376 100%)",
+      paper: "#000000cc",
+      secondary: "#f5f5f5cc",
+    },
+    primary: {
+      main: "#7D3FC2",
     },
     error: {
       main: "#DF074F",

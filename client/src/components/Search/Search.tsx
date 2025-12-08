@@ -2,7 +2,7 @@ import { Box, ButtonBase, TextField, Typography } from "@mui/material";
 import { Search as SearchIcon } from "@mui/icons-material";
 import { useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
-import { SEARCH_HEIGHT } from "./Search.constants";
+import { CONTROL_SIZE } from "../Header/Header.constants";
 
 const MotionBox = motion.create(Box);
 const MotionTextField = motion.create(TextField);
@@ -27,7 +27,7 @@ function Search() {
           setText("");
         }}
         position="relative"
-        height={SEARCH_HEIGHT}
+        height={CONTROL_SIZE}
         marginLeft={active ? 53 : 0}
       >
         <ButtonBase

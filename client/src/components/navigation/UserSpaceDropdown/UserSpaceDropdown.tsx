@@ -52,6 +52,7 @@ function UserSpaceDropdown() {
           >
             {spaces.map((space) => (
               <UserSpaceDropdownItemBase
+                key={space.id}
                 id={space.id}
                 name={space.name}
                 avatar={space.avatar}
