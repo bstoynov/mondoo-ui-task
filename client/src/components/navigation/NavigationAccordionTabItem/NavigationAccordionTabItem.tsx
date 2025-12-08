@@ -52,6 +52,7 @@ function NavigationAccordionTabItem({
           <MotionStack
             key="accordion-content"
             {...ACCORDION_TRANSITION_PROPS}
+            marginTop={2}
             gap={2}
           >
             {tabs.map(renderTab)}

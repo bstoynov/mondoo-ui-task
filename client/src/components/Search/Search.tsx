@@ -28,6 +28,7 @@ function Search() {
         }}
         position="relative"
         height={SEARCH_HEIGHT}
+        marginLeft={active ? 53 : 0}
       >
         <ButtonBase
           type="submit"

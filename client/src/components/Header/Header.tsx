@@ -13,7 +13,10 @@ function Header() {
         Home
       </Typography>
 
-      <Search />
+      <Stack direction="row" gap={4}>
+        asd
+        <Search />
+      </Stack>
     </Stack>
   );
 }
