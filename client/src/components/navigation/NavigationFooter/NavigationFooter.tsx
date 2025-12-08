@@ -15,7 +15,7 @@ function NavigationFooter() {
       justifyContent="center"
       alignItems="center"
       width="100%"
-      sx={{ aspectRatio: 1 }}
+      height="25%"
     >
       <img src={avatar} width={36} height={36} style={{ borderRadius: 18 }} />
     </Stack>

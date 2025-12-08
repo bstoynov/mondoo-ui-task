@@ -3,7 +3,7 @@ import logo from "@/assets/logo.svg";
 
 function NavigationHeader() {
   return (
-    <Stack justifyContent="center" alignItems="center" sx={{ aspectRatio: 1 }}>
+    <Stack justifyContent="center" alignItems="center" height="25%">
       <img src={logo} width={50} height={50} />
     </Stack>
   );

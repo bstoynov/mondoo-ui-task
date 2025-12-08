@@ -22,7 +22,6 @@ function DateField() {
           disableRipple
           ref={buttonRef}
           onClick={() => setOpen(true)}
-          // TODO: move search height to common constants
           sx={(theme) => ({
             display: "flex",
             gap: 1,

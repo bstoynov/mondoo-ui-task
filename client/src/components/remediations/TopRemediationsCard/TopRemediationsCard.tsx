@@ -8,7 +8,7 @@ import { parseTableData } from "../TopRemediationsTable/TopRemediationsTable.uti
 function TopRemediationsCard() {
   const { data, loading } = useTickets();
 
-  if (loading) return <Shimmer height={353} borderRadius={6} />;
+  if (loading) return <Shimmer height={400} borderRadius={6} />;
   if (!data) return null;
 
   const { rows, columns } = parseTableData(data);
